@@ -3,4 +3,5 @@
         <%= @gossip.title %><br/>
         <%= @gossip.user.first_name %> <%= @gossip.user.last_name %><br/>
         <%= @gossip.content %>
+        <p><%= link_to 'Voir l auteur', user_path(@gossip.user) %></p>
     </p>

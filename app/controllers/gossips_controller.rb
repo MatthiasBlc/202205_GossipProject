@@ -1,13 +1,9 @@
 class GossipsController < ApplicationController
-  before_action :set_gossip, only: [:show]
+  def index
+    @gossips = Gossip.all
+  end
 
-  def index; end
-
-  def show; end
-
-  private
-
-  def set_gossip
+  def show
     @gossip = Gossip.find(params[:id])
   end
 end
