@@ -1,0 +1,6 @@
+<h1>Voici la page du potin n°<%= params[:id]%></h1>
+    <p>
+        <%= @gossip.title %><br/>
+        <%= @gossip.user.first_name %> <%= @gossip.user.last_name %><br/>
+        <%= @gossip.content %>
+    </p>

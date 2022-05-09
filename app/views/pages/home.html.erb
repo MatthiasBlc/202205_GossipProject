@@ -1,0 +1,12 @@
+    <h1>Mon super site de gossip, depuis le dossier views !</h1>
+    <%# <p> Bienvenue sur le gossip project website. Voici la liste des gossips, tu peux aussi aller sur la page <a href="/gossips/new/">de création</a></p> %>
+
+ <% Gossip.all.each do |gossip| %>
+        <p>
+          <%= gossip.title %><br/>
+          <%= gossip.user.first_name %><br/>
+          <%= link_to "test", gossips_path(gossip.id) %>
+        </p>
+      <% end %>
+
+
